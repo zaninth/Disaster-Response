@@ -1,7 +1,7 @@
 # Disaster-Response-Pipelines
 
 ## 🚀**Introduction**
-This project is part of The [Udacity](https://eu.udacity.com/) Data Scientist Nanodegree Program.The goal of this project is to apply the data engineering skills learned in the course to analyze disaster data from [Figure Eight](https://www.figure-eight.com/) to build a model for an API that classifies disaster messages. 
+This project is part of The [Udacity](https://eu.udacity.com/) Data Scientist Nanodegree Program. The goal of this project is to apply the data engineering skills learned in the course to analyze disaster data from [Figure Eight](https://www.figure-eight.com/) to build a model for an API that classifies disaster messages. 
 The aim of the project was divided into 3 sections:
 
 * **Data Processing**: build an ETL-Pipeline to extract data from the given dataset, clean the data, and then store it in a SQLite database.
