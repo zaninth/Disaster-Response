@@ -11,13 +11,21 @@ classification. The script uses NLTK, scikit-learn's Pipeline and GridSearchCV.
 different categories.
 
 ## 📁 **Data/File Description**
-- disaster_categories.csv - Contains the id, message that was sent and genre.
-- disaster_messages.csv - Contains the id and the categories (related, offer, medical assistance..) the message belonged to.
-- DisasterResponse.db - Database contain cleaned data
-- process_data.py - Used for data cleaning and pre-processing
-- train_classifier.py - Used to train the model
-- classifier.pkl - Trained model
-- run.py - To run Web App
+* App:
+    - Templates with html's archives.
+    - run.py - Script to run the web app.
+* Preparation: 
+    - ETL Pipeline prearation - Jupyter notebook with all data analyses e preparations.
+    - ML Pipeline preparation - Jupyter notebook with all ML models and parameters to find the one who best fit to the proposal.
+* Data:
+    - disaster_categories.csv - Contains the id, message that was sent and genre.
+    - disaster_messages.csv - Contains the id and the categories (related, offer, medical assistance..) the message belonged to.
+    - process_data.py - Script used for data cleaning and pre-processing.
+    - DisasterResponse.db - Database contain cleaned data and load in SQL.
+* Models:
+    - train_classifier.py - Script used to train the model.
+* Images:
+    - Images from the web app running.
 
 ## ⚠️**Software and Libraries**
 * This project uses Python 3.7.2 and the following libraries:
