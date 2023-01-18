@@ -11,49 +11,53 @@ classification. The script uses NLTK, scikit-learn's Pipeline and GridSearchCV.
 different categories.
 
 ## 📁 **Data/File Description**
-* App:
-    - Templates with html's archives.
-    - run.py - Script to run the web app.
-* Preparation: 
-    - ETL Pipeline prearation - Jupyter notebook with all data analyses e preparations.
-    - ML Pipeline preparation - Jupyter notebook with all ML models and parameters to find the one who best fit to the proposal.
-* Data:
-    - disaster_categories.csv - Contains the id, message that was sent and genre.
-    - disaster_messages.csv - Contains the id and the categories (related, offer, medical assistance..) the message belonged to.
-    - process_data.py - Script used for data cleaning and pre-processing.
-    - DisasterResponse.db - Database contain cleaned data and load in SQL.
-* Models:
-    - train_classifier.py - Script used to train the model.
-* Images:
-    - Images from the web app running.
+* Best Model:
+    - Metadata of best model.
+    - stages/RandomForestClassifier.
+* Images: 
+    - All images of Data Analisys.
+* Scored json:
+    - 4 files off json format with small dataset already scored by the model.
+    - sparkify_ranked.ipynb - notebook with process took to ranke the scored dataset.
+* Main:
+    - Sparkify.ipynb - notebook with all steps since exploratory analisys until finished model.
+    - Sparkify_functions.ipynb - nootebook with all functions and pipelines extracted and ready to run on larges datasets. AWS EMR.
+    - Sparkify_ranked.ipynb - notebook with process took to ranke the scored dataset.
 
 ## ⚠️**Software and Libraries**
 * This project uses Python 3.7.2 and the following libraries:
 * [NumPy](http://www.numpy.org/)
 * [Pandas](http://pandas.pydata.org)
-* [NLTK](https://www.nltk.org/)
-* [Scikit-learn](http://scikit-learn.org/stable/)
-* [Sqlalchemy](https://www.sqlalchemy.org/)
-* [Dash](https://plot.ly/dash/)
-* [Flask](https://flask.palletsprojects.com/en/2.2.x/)
+* [Spark](https://spark.apache.org/docs/3.1.3/api/python/index.html#)
+* [Matplotlib](https://matplotlib.org/stable/index.html)
  
-## 🚀Instructions
-1. Run the following commands in the project's root directory to set up your database and model.
+## 🚀 References
 
-    - To run ETL pipeline that cleans data and stores in database
-        `python data/process_data.py data/disaster_messages.csv data/disaster_categories.csv data/DisasterResponse.db`
-    - To run ML pipeline that trains classifier and saves model
-        `python models/train_classifier.py data/DisasterResponse.db models/classifier.pkl`
+- [Getting Pandas like dummies in PySpark](https://stackoverflow.com/questions/42805663/e-num-get-dummies-in-pySpark)
 
-2. Run the following command in the app's directory to run your web app.
-    `python run.py`
+- [Using multiple if-else conditions in a list comprehension](https://stackoverflow.com/questions/9987483/elif-in-list-comprehension-conditionals)
 
-3. Go to http://0.0.0.0:3001/
+- [Business Insider article on classifying region based on U.S. State](https://www.businessinsider.in/The-US-government-clearly-defines-the-Northeast-Midwest-South-and-West-heres-where-your-state-falls/THE-MIDWEST/slideshow/63954185.cms)
 
-![alt text](https://github.com/zaninth/Disaster-Response/blob/main/images/distribution%20image.png)
-![alt text](https://github.com/zaninth/Disaster-Response/blob/main/images/porportion%20of%20messages.png)
-![alt text](https://github.com/zaninth/Disaster-Response/blob/main/images/heatmap.png)
-![alt text](https://github.com/zaninth/Disaster-Response/blob/main/images/image%201.png)
+- [Write single CSV file (instead of batching) using
+  Spark](https://stackoverflow.com/questions/31674530/write-single-csv-file-using-spark-csv)
+  
+<a id="ref_lr"></a>
+
+- [Python API docs for Logistic Regression](https://spark.apache.org/docs/2.1.1/api/python/pyspark.ml.html#pyspark.ml.classification.LogisticRegression)
+
+<a id="ref_rf"></a>
+
+- [Python API docs for Random Forest Classifier](https://spark.apache.org/docs/2.1.1/api/python/pyspark.ml.html#pyspark.ml.classification.RandomForestClassifier)
+
+<a id="ref_gbt"></a>
+
+- [Python API docs for GBTClassifier](https://spark.apache.org/docs/2.2.0/api/python/pyspark.ml.html#pyspark.ml.classification.GBTClassifier)
+
+<a id="f1_blog"></a>
+
+- [Knowledge about F1 score and why it is a better metric for imbalanced data
+  set](https://towardsdatascience.com/beyond-accuracy-precision-and-recall-3da06bea9f6c)
 
 ## Acknowledgments
 I would like to thank the team from [Udacity's](https://www.udacity.com/) for the great support and the brilliant online 
